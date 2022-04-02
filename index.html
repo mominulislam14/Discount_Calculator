@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discount calculator</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <h3 class="text-white bg-primary text-center m-0 p-3">SKICT-Mominul Islam(Batch-01)</h3>
+    </div>
+
+    <div class="container">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+
+              <a class="navbar-brand fw-bold" href="#">MOMINUL</a>
+
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#">Physics</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#">Chemistry</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#">Mathmatics</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#">English</a>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+        </nav>
+    </div>
+
+    <div class="container mb-1">
+
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/4.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="img/3.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="img/2.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="img/1.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
+    </div>
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-sm-8 bg-danger mx-auto p-4">
+
+                <form action="">
+
+                    <div class="row">
+                        <h2 class="text-center text-white mb-3">Discount Calculator</h2>
+                    </div>
+
+                    <div class="row mb-3">
+                        <label for="total_amount" class="col-sm-4 text-white">Total Amount</label>
+                        <div class="col-sm-8">
+                            <input type="number" class="form-control" id="total_amount">
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <label for="discount_type" class="col-sm-4 text-white">Discount Type</label>
+                        <div class="col-sm-8">
+                           <select id="discount_type" class="form-control">
+                                <option selected>Select discount</option>
+                                <option value="parcent">Parcentage(%) Discount</option>
+                                <option value="flat">flat Discount</option>
+                           </select>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <label for="discount_amount" class="col-sm-4 text-white">Discount Amount</label>
+                        <div class="col-sm-8">
+                            <input type="number" class="form-control" id="discount_amount">
+                        </div>
+                    </div>
+
+                    <div class="row mb-3 d-none" id="total_d">
+                        <label for="t_discount_amount" class="col-sm-4 text-white">Total Discount Amount</label>
+                        <div class="col-sm-8">
+                            <input type="number" disabled class="form-control" id="t_discount_amount">
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <label for="total" class="col-sm-4 text-white">Total</label>
+                        <div class="col-sm-8">
+                            <input type="number" disabled class="form-control" id="total">
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-success" id="calculate">calculate</button>
+                            <button type="button" class="btn btn-primary" id="reset">reset</button>
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container bg-dark mt-1">
+        <div class="row text-white p-4">
+            <div class="col-sm-4">
+                <p><strong>CSE Department</strong></p>
+                <p><strong>C programming</strong></p>
+                <p><strong>Java programming</strong></p>
+            </div>
+            <div class="col-sm-4">
+                <p><strong>Bangla Department</strong></p>
+                <p><strong>Bangla Department Poem</strong></p>
+                <p><strong>Bangla Department Story</strong></p>
+
+            </div>
+            <div class="col-sm-4">
+                <p><strong>Facebook</strong></p>
+                <p><strong>Twitter</strong></p>
+                <p><strong>Instagram</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <h4 class="bg-dark text-light text-center p-4">@Copyright By Mominul Islam-2022</h4>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <script>
+
+        $("#calculate").click(function(event){
+            event.preventDefault();
+
+            var x = $("#total_amount").val();
+            var total_amount = parseFloat(x);
+
+            var y = $("#discount_amount").val();
+            var discount_amount = parseFloat(y);
+
+            var discount_type = $("#discount_type").val();
+
+            if(discount_type == 'parcent'){
+                var total2 = total_amount - (total_amount * discount_amount / 100);
+                $("#total").val(total2);
+            }
+            else if(discount_type == 'flat'){
+                var total = total_amount - discount_amount;
+                $("#total").val(total);
+            }
+        })
+        
+        $("#reset").click(function(event){
+            event.preventDefault();
+
+            $("#total_amount").val("");
+            $("#discount_type option:first").prop("selected", "true");
+            $("#discount_amount").val("");
+            $("#total").val(" ");
+        })
+
+        $("#discount_type").change(function(){
+            var d_type = $("#discount_type").val();
+
+            if(d_type == "parcent"){
+                $("#total_d").removeClass("d-none");
+            }
+            else{
+                $("#total_d").addClass("d-none");
+            }
+        })
+
+    </script>
+</body>
+</html>
